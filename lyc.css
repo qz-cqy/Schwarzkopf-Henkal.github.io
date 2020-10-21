@@ -1,0 +1,13 @@
+.alpha_with_shadow {
+    opacity: 0.5;
+    border-radius: 3px;
+    box-shadow: 2px 5px 2px grey, -2px 5px 2px grey, 2px -1px 2px grey, -2px -1px 2px grey;
+}
+
+.lycdisplay {
+    width: 60%;
+    height: 30em;
+    /* background-color: gray; */
+    background-image: "";
+    margin: auto;
+}
