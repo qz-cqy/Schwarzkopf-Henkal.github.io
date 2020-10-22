@@ -1,13 +1,48 @@
-.alpha_with_shadow {
-    opacity: 0.5;
-    border-radius: 3px;
+@font-face {
+    font-family: "Ubuntu";
+    src: url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/UR.ttf");
+}
+
+.with_shadow {
+    border-radius: 5px;
     box-shadow: 2px 5px 2px grey, -2px 5px 2px grey, 2px -1px 2px grey, -2px -1px 2px grey;
 }
 
-.lycdisplay {
-    width: 60%;
-    height: 30em;
-    /* background-color: gray; */
-    background-image: "";
-    margin: auto;
+.console_default {
+    height: 588px;
+    width: 890px;
+    position: absolute;
+}
+
+#headbar {
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+    background-image: linear-gradient(to bottom, #59574F, #403F3A);
+    width: 890px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+}
+
+.toolbar {
+    position: relative;
+    background-color: #3C3B37;
+    width: 890px;
+    height: 30px;
+    top: 30px;
+    left: 0px;
+}
+
+.text_select_deny {
+    user-select: none;
+}
+
+#title {
+    font-family: "Ubuntu";
+    font-weight: 550;
+    height: 0px;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
