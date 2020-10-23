@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf8">
     <link href="lyc.css" rel="stylesheet">
-    <link href="lyc.js" rel="javascript">
+    <script type="text/javascript" src="lyc.js"></script>
     <title>南极公社</title>
 </head>
 
 <body>
-    <div class="with_shadow console_default" style="top: 40px;left: 40px;">
+    <div class="with_shadow console_default" style="top: 40px;left: 40px;" id="console">
         <div id="headbar">
             <p class="select_deny" id="title">Ubuntu@49.234.17.22:~</p>
             <div id="window_nav" class="select_deny">
@@ -22,6 +22,15 @@
         </div>
         <div id="console_background"></div>
     </div>
+    <script>
+        window.onload = function() {
+            var bar = document.getElementById("headbar"),
+                tar = document.getElementById("console");
+            startDrag(bar, tar);
+            console.log(bar);
+            console.log(tar);
+        }
+    </script>
 </body>
 
 </html>
