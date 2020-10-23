@@ -55,9 +55,9 @@
 
 #window_nav {
     height: 20px;
-    width: 65px;
+    width: 80px;
     position: absolute;
-    left: 820px;
+    left: 812px;
     top: 3px;
 }
 
@@ -102,4 +102,12 @@
     background-color: #2D0922;
     left: 0px;
     top: 60px;
+}
+
+.tool_option {
+    color: white;
+}
+
+#toolbar_head {
+    margin-left: 6px;
 }
