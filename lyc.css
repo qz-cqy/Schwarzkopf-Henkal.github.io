@@ -1,6 +1,11 @@
 @font-face {
     font-family: "Ubuntu";
-    src: url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/UR.ttf");
+    src: local("Ubuntu"), url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/UR.ttf");
+}
+
+@font-face {
+    font-family: "UbuntuMono";
+    src: local("Ubuntu Mono"), url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/URM.ttf");
 }
 
 .with_shadow {
@@ -16,7 +21,7 @@
 
 #headbar {
     border-radius: 5px 5px 0px 0px;
-    position: relative;
+    position: absolute;
     background-image: linear-gradient(to bottom, #59574F, #403F3A);
     width: 890px;
     height: 30px;
@@ -25,7 +30,7 @@
 }
 
 .toolbar {
-    position: relative;
+    position: absolute;
     background-color: #3C3B37;
     width: 890px;
     height: 30px;
@@ -33,16 +38,68 @@
     left: 0px;
 }
 
-.text_select_deny {
+.select_deny {
     user-select: none;
 }
 
 #title {
     font-family: "Ubuntu";
-    font-weight: 550;
+    font-weight: bold;
+    font-size: 16px;
     height: 0px;
     color: white;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+#window_nav {
+    height: 20px;
+    width: 65px;
+    position: absolute;
+    left: 820px;
+    top: 3px;
+}
+
+#mini_icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/icons/mini.png");
+    background-position: center center;
+    background-size: 17px 17px;
+    background-color: #7D7C76;
+    border-radius: 10px;
+}
+
+#full_icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/icons/full.png");
+    background-position: center center;
+    background-size: 17px 17px;
+    background-color: #7D7C76;
+    border-radius: 10px;
+}
+
+#exit_icon {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    background-image: url("https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/icons/exit.png");
+    background-position: center center;
+    background-size: 17px 17px;
+    background-color: #E55D2F;
+    border-radius: 10px;
+}
+
+#console_background {
+    position: absolute;
+    width: 890px;
+    height: 528px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #2D0922;
+    left: 0px;
+    top: 60px;
 }
