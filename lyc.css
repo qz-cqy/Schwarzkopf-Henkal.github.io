@@ -121,6 +121,7 @@
     display: none;
     background-color: #3C3B37;
     z-index: 99999;
+    padding-bottom: 2px;
 }
 
 .tool_option:hover {
@@ -140,4 +141,16 @@
 
 .options {
     padding-left: 1em;
+    height: 1.7em;
+    padding-right: 0.5em;
+}
+
+.options:hover {
+    background-color: #EE7747;
+}
+
+.option_note {
+    opacity: 0.5;
+    /* position: absolute;
+    right: 0px; */
 }
