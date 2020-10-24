@@ -98,16 +98,37 @@
     position: absolute;
     width: 890px;
     height: 528px;
-    border-radius: 0px 0px 5px 5px;
+    /* border-radius: 0px 0px 5px 5px; */
     background-color: #2D0922;
     left: 0px;
     top: 60px;
 }
 
 .tool_option {
+    text-decoration: none;
     color: white;
 }
 
 #toolbar_head {
     margin-left: 6px;
+}
+
+.option_container {
+    position: absolute;
+    top: 30px;
+    height: 10px;
+    width: 5em;
+    /* width: auto; */
+    display: none;
+    /* background-color: red; */
+    z-index: 99999;
+}
+
+.tool_option:hover {
+    cursor: default;
+}
+
+.tool_option:focus+.option_container {
+    background-color: dodgerblue;
+    display: block;
 }

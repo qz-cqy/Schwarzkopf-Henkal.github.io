@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf8">
     <link href="lyc.css" rel="stylesheet">
-    <script type="text/javascript" src="lyc.js"></script>
     <title>南极公社</title>
 </head>
 
@@ -16,24 +15,35 @@
                 <i id="full_icon"></i>
                 <i id="exit_icon"></i>
             </div>
-            <nav class="toolbar">
-                <span class="tool_option" id="toolbar_head">文件(F)</span>
-                <span class="tool_option">编辑(E)</span>
-                <span class="tool_option">查看(V)</span>
-                <span class="tool_option">搜索(S)</span>
-                <span class="tool_option">终端(T)</span>
-                <span class="tool_option">帮助(H)</span>
+            <nav class="toolbar select_deny">
+                <a class="tool_option" id="toolbar_head" href="#">文件(F)</a>
+                <div class="option_container" style="left: 0px;">
+                </div>
+                <a class="tool_option" id="toolbar_sec" href="#">编辑(E)</a>
+                <div class="option_container" style="left: 67px;">
+                </div>
+                <a class="tool_option" id="toolbar_trd" href="#">查看(V)</a>
+                <div class="option_container" style="left: 132px;">
+                </div>
+                <a class="tool_option" id="toolbar_frh" href="#">搜索(S)</a>
+                <div class="option_container" style="left: 197px;">
+                </div>
+                <a class="tool_option" id="toolbar_ffh" href="#">终端(T)</a>
+                <div class="option_container" style="left: 260px;">
+                </div>
+                <a class="tool_option" id="toolbar_last" href="#">帮助(H)</a>
+                <div class="option_container" style="left: 325px;">
+                </div>
             </nav>
         </div>
         <div id="console_background"></div>
     </div>
+    <script type="text/javascript" src="lyc.js"></script>
     <script>
         window.onload = function() {
             var bar = document.getElementById("headbar"),
                 tar = document.getElementById("console");
             startDrag(bar, tar);
-            console.log(bar);
-            console.log(tar);
         }
     </script>
 </body>
