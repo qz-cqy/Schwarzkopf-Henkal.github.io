@@ -140,9 +140,10 @@
 }
 
 .options {
-    padding-left: 1em;
-    height: 1.7em;
+    padding-left: 1.1em;
+    height: 1.8em;
     padding-right: 0.5em;
+    line-height: 1.8em;
 }
 
 .options:hover {
