@@ -116,11 +116,10 @@
 .option_container {
     position: absolute;
     top: 30px;
-    height: 10px;
-    width: 5em;
-    /* width: auto; */
+    width: auto;
+    height: auto;
     display: none;
-    /* background-color: red; */
+    background-color: #3C3B37;
     z-index: 99999;
 }
 
@@ -129,6 +128,12 @@
 }
 
 .tool_option:focus+.option_container {
-    background-color: dodgerblue;
     display: block;
+}
+
+.opt_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
