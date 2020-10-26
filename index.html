@@ -16,7 +16,8 @@
                 <i id="exit_icon"></i>
             </div>
             <nav class="toolbar select_deny">
-                <a class="tool_option" id="toolbar_head" href="#">文件(F)</a>
+                <label class="tool_option" for="F">文件(F)</label>
+                <input type="checkbox" class="bar_box" id="F">
                 <div class="option_container" style="left: 0px;">
                     <ul class="opt_list">
                         <li class="options"><span>新建标签页(T)</span></li>
@@ -25,7 +26,8 @@
                         <li class="options"><span>关闭窗口(C)</span> <span class="option_note">Shift+Ctrl+Q</span></li>
                     </ul>
                 </div>
-                <a class="tool_option" id="toolbar_sec" href="#">编辑(E)</a>
+                <label class="tool_option" for="E">编辑(E)</label>
+                <input type="checkbox" class="bar_box" id="E">
                 <div class="option_container" style="left: 67px;">
                     <ul class="opt_list">
                         <li class="options"><span>复制(C)</span> <span class="option_note">Shift+Ctrl+C</span></li>
@@ -35,7 +37,8 @@
                         <li class="options"><span>首选项(R)</span></li>
                     </ul>
                 </div>
-                <a class="tool_option" id="toolbar_trd" href="#">查看(V)</a>
+                <label class="tool_option" for="V">查看(V)</label>
+                <input type="checkbox" class="bar_box" id="V">
                 <div class="option_container" style="left: 132px;">
                     <ul class="opt_list">
                         <li class="options"><span>查看菜单栏(M)</span></li>
@@ -45,7 +48,8 @@
                         <li class="options"><span>缩小(O)</span> <span class="option_note">Ctrl+-</span></li>
                     </ul>
                 </div>
-                <a class="tool_option" id="toolbar_frh" href="#">搜索(S)</a>
+                <label class="tool_option" for="S">搜索(S)</label>
+                <input type="checkbox" class="bar_box" id="S">
                 <div class="option_container" style="left: 197px;">
                     <ul class="opt_list">
                         <li class="options"><span>查找(F)</span> <span class="option_note">Shift+Ctrl+F</span></li>
@@ -54,7 +58,8 @@
                         <li class="options"><span>清除高亮(N)</span> <span class="option_note">Ctrl+0</span></li>
                     </ul>
                 </div>
-                <a class="tool_option" id="toolbar_ffh" href="#">终端(T)</a>
+                <label class="tool_option" for="T">终端(T)</label>
+                <input type="checkbox" class="bar_box" id="T">
                 <div class="option_container" style="left: 260px;">
                     <ul class="opt_list">
                         <li class="options"><span>设定字符编码(C)</span></li>
@@ -67,7 +72,8 @@
                         <li class="options"><span>4. 132×43</span></li>
                     </ul>
                 </div>
-                <a class="tool_option" id="toolbar_last" href="#">帮助(H)</a>
+                <label class="tool_option" for="H">帮助(H)</label>
+                <input type="checkbox" class="bar_box" id="H">
                 <div class="option_container" style="left: 325px;">
                     <ul class="opt_list">
                         <li class="options"><span>目录(C)</span></li>
@@ -76,11 +82,8 @@
                 </div>
             </nav>
         </div>
-        <div id="console_background" style="overflow-x: hiddenrfslexdrzw;">
-            <!-- <label for="console"></label>
-            <textarea name="console" id="console_input" cols="30" rows="10">
-                    <span style="font-family: 'UbuntuMono';color:#8AE234;">Ubuntu@49.234.17.22</span>
-            </textarea> -->
+        <div id="console_background" style="overflow-x: hidden;">
+            <pre class="output"></pre>
         </div>
     </div>
     <script type="text/javascript" src="lyc.js"></script>

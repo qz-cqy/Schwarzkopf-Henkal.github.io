@@ -109,7 +109,7 @@
     color: white;
 }
 
-#toolbar_head {
+.tool_option:first-child {
     margin-left: 6px;
 }
 
@@ -119,6 +119,7 @@
     width: auto;
     height: auto;
     display: none;
+    /* display: block; */
     background-color: #3C3B37;
     z-index: 99999;
     padding-bottom: 2px;
@@ -131,6 +132,11 @@
 .tool_option:focus+.option_container {
     display: block;
 }
+
+
+/* .tool_option:active+.option_container {
+    display: block;
+} */
 
 .opt_list {
     list-style-type: none;
@@ -155,3 +161,42 @@
     /* position: absolute;
     right: 0px; */
 }
+
+.bar_box {
+    position: absolute;
+    opacity: 0;
+    height: 30px;
+    width: 60px;
+    margin: 0;
+    top: 0;
+}
+
+.bar_box:checked+.option_container {
+    display: block;
+}
+
+#F {
+    left: 4px;
+}
+
+#E {
+    left: 67px;
+}
+
+#V {
+    left: 130px;
+}
+
+#S {
+    left: 195px;
+}
+
+#T {
+    left: 260px;
+}
+
+#H {
+    left: 324px;
+}
+
+.output {}
