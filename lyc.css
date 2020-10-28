@@ -94,7 +94,7 @@
     border-radius: 10px;
 }
 
-#console_background {
+#terminal {
     position: absolute;
     width: 890px;
     height: 528px;
@@ -199,4 +199,77 @@
     left: 324px;
 }
 
-.output {}
+.output {
+    color: white;
+}
+
+.output_span {
+    font-family: 'UbuntuMono';
+    font-size: 1.2em;
+    margin: 0;
+    /* width: auto; */
+}
+
+.user_info {
+    font-weight: bold;
+    font-family: 'UbuntuMono';
+    /* font-size: 1.2em; */
+}
+
+.user_info:nth-child(1) {
+    color: #8AE234;
+}
+
+.user_info:nth-child(2) {
+    color: white;
+}
+
+.user_info:nth-child(3) {
+    color: #729FCF;
+}
+
+.user_info:nth-child(4) {
+    color: #8AE234;
+}
+
+.input_box {
+    font-size: 1.2em;
+}
+
+.input {
+    font-family: 'UbuntuMono';
+    resize: none;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 890px;
+    font-size: 1.2em;
+    min-width: 1px;
+    padding: 0;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+#terminal::-webkit-scrollbar {
+    width: 5px;
+    height: 16px;
+}
+
+#terminal::-webkit-scrollbar:hover {
+    width: 10px;
+    background-color: #776170;
+}
+
+#terminal::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #C9613F;
+}
