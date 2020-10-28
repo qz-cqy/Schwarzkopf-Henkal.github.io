@@ -107,6 +107,7 @@
 .tool_option {
     text-decoration: none;
     color: white;
+    font-family: 'Ubuntu';
 }
 
 .tool_option:first-child {
@@ -245,7 +246,7 @@
     overflow-y: hidden;
     overflow-x: hidden;
     width: 890px;
-    font-size: 1.2em;
+    font-size: 1em;
     min-width: 1px;
     padding: 0;
     border: none;
