@@ -68,8 +68,13 @@ $(function() {
     var input = $('.input');
     var commands = [
         { "name": "clear", "function": clearConsole },
-        { "name": "help", "function": help }
+        { "name": "help", "function": help },
+        { "name": "sudo", "function": sudo },
+        { "name": "ShowMeNekoha", "function": ShowMeNekoha }
     ];
+    var Nekos = [
+        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/NK2.jpeg" }
+    ]
     terminal.on('click', () => {
         input.focus();
     })
@@ -82,11 +87,29 @@ $(function() {
         })
         //functions on----------
     function help() {
-        print('呐呐呐呐呐呐呐呐', false);
+        let helpmessage = 'Available commands:[ ';
+        for (let i = 0; i < commands.length; i++) {
+            if (i > 0)
+                helpmessage += ' , ';
+            helpmessage += commands[i].name;
+        }
+        print(helpmessage + ' ]', false);
     }
 
     function clearConsole() {
         terminal.children('.output_box').remove();
+    }
+
+    function sudo() {
+        print('On my serve, Master. What do you need?', false);
+    }
+
+    function ShowMeNekoha() {
+        printImage(Nekos[Math.floor(Math.random() * Nekos.length)].url);
+    }
+
+    function printImage(url) {
+        input_box.before(`<div class="output_box"><img src="${url}" style="width:500px;"></div>`);
     }
 
     function print(cmd, usr) {
