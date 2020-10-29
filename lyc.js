@@ -70,7 +70,8 @@ $(function() {
         { "name": "clear", "function": clearConsole },
         { "name": "help", "function": help },
         { "name": "sudo", "function": sudo },
-        { "name": "ShowMeNekoha", "function": ShowMeNekoha }
+        { "name": "ShowMeNekoha", "function": ShowMeNekoha },
+        { "name": "github", "function": github }
     ];
     var Nekos = [
         { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/NK2.jpeg" }
@@ -106,6 +107,14 @@ $(function() {
 
     function ShowMeNekoha() {
         printImage(Nekos[Math.floor(Math.random() * Nekos.length)].url);
+    }
+
+    function github() {
+        print('Repo address: https://github.com/Schwarzkopf-Henkal/Schwarzkopf-Henkal.github.io', false);
+        print('My blog: http://49.234.17.22/', false);
+        print('Welcome to the Antarctic Commune!', false);
+        print('\n', false);
+        print('*Build on Github Pages.', false);
     }
 
     function printImage(url) {
