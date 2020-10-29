@@ -64,7 +64,7 @@ window.onload = function() {
 }
 $(function() {
     var terminal = $('#terminal');
-    var input_box = $('.input-box');
+    var input_box = $('.input_box');
     var input = $('.input');
     var commands = [
         { "name": "clear", "function": clearConsole },
@@ -75,28 +75,27 @@ $(function() {
     })
     input.on('keypress', function(key) {
             if (key.keyCode == 13) {
-                print(input.val, 1);
-            }
+                print(input.val(), true);
+                input.val('');
+            } else if (input.val()[0] == '\n')
+                input.val('');
         })
         //functions on----------
     function help() {
-
+        print('呐呐呐呐呐呐呐呐', false);
     }
-
 
     function clearConsole() {
         terminal.children('.output_box').remove();
     }
 
     function print(cmd, usr) {
-        input_box.before('<div class="output_box">');
         if (usr === true) {
-            input_box.before('<pre class="output_span"><span class="user_info">Ubuntu@49.234.17.22</span><span class="user_info">:</span><span class="user_info">~</span><span class="user_info">$ </span><span class="output">' + cmd + '</span></pre>');
+            input_box.before('<div class="output_box"><pre class="output_span"><span class="user_info">Ubuntu@49.234.17.22</span><span class="user_info">:</span><span class="user_info">~</span><span class="user_info">$ </span><span class="output">' + cmd + '</span></pre></div>');
         } else {
-            input_box.before('<pre class="output_span"><span class="output">' + cmd + '</span></pre>');
+            input_box.before('<div class="output_box"><pre class="output_span"><span class="output">' + cmd + '</span></pre></div>');
         }
-        input_box.before('</div>')
-        input.val("");
+        input.val('');
         if (usr === true)
             RunCmd(cmd);
     }
@@ -107,7 +106,8 @@ $(function() {
                 commands[i].function();
                 return true;
             }
-        print('Unknown Command.', false);
+        if (cmd !== '\n' && cmd !== '')
+            print('Unknown Command.', false);
         return false;
     }
     //functions end---------
