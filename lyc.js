@@ -57,3 +57,58 @@ var startDrag = function(bar, target, callback) {
         }
     }
 };
+window.onload = function() {
+    var bar = document.getElementById("headbar"),
+        tar = document.getElementById("console");
+    startDrag(bar, tar);
+}
+$(function() {
+    var terminal = $('#terminal');
+    var input_box = $('.input-box');
+    var input = $('.input');
+    var commands = [
+        { "name": "clear", "function": clearConsole },
+        { "name": "help", "function": help }
+    ];
+    terminal.on('click', () => {
+        input.focus();
+    })
+    input.on('keypress', function(key) {
+            if (key.keyCode == 13) {
+                print(input.val, 1);
+            }
+        })
+        //functions on----------
+    function help() {
+
+    }
+
+
+    function clearConsole() {
+        terminal.children('.output_box').remove();
+    }
+
+    function print(cmd, usr) {
+        input_box.before('<div class="output_box">');
+        if (usr === true) {
+            input_box.before('<pre class="output_span"><span class="user_info">Ubuntu@49.234.17.22</span><span class="user_info">:</span><span class="user_info">~</span><span class="user_info">$ </span><span class="output">' + cmd + '</span></pre>');
+        } else {
+            input_box.before('<pre class="output_span"><span class="output">' + cmd + '</span></pre>');
+        }
+        input_box.before('</div>')
+        input.val("");
+        if (usr === true)
+            RunCmd(cmd);
+    }
+
+    function RunCmd(cmd) {
+        for (let i = 0; i < commands.length; i++)
+            if (cmd === commands[i].name) {
+                commands[i].function();
+                return true;
+            }
+        print('Unknown Command.', false);
+        return false;
+    }
+    //functions end---------
+})
