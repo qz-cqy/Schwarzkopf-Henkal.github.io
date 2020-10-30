@@ -70,11 +70,14 @@ $(function() {
         { "name": "clear", "function": clearConsole },
         { "name": "help", "function": help },
         { "name": "sudo", "function": sudo },
-        { "name": "ShowMeNekoha", "function": ShowMeNekoha },
+        { "name": "Nekoha", "function": ShowMeNekoha },
         { "name": "github", "function": github }
     ];
     var Nekos = [
-        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/NK2.jpeg" }
+        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/NK2.jpeg" },
+        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/N1.png" },
+        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/N2.png" },
+        { "url": "https://cdn.jsdelivr.net/gh/Schwarzkopf-Henkal/CDN/N3.png" }
     ]
     terminal.on('click', () => {
         input.focus();
